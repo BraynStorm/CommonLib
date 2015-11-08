@@ -5,6 +5,7 @@ import java.io.PrintStream;
 
 public class Logger {
     private static boolean I = false;
+    private static boolean logEverything = false;
     
     public static void init(String mainFolder){
         if(I)
@@ -21,6 +22,10 @@ public class Logger {
         }
         
         I = true;
+    }
+    
+    public static void setLogEverything(boolean v){
+        logEverything = v;
     }
 
     
@@ -50,8 +55,12 @@ public class Logger {
         if(level.equals(LogLevel.IMPOSSIBRU) || level.equals(LogLevel.CRITICAL)){
             e.printStackTrace(System.out);
             System.exit(1);
-        } else if (level.equals(LogLevel.DEBUG))
+        } else if (level.equals(LogLevel.DEBUG) || logEverything)
             e.printStackTrace(System.out);
+    }
+    
+    public static void logInfo(Object obj){
+        logInfo(obj.toString());
     }
     
     public static void logInfo(String message){
@@ -93,7 +102,7 @@ public class Logger {
         if (level == LogLevel.IMPOSSIBRU || level == LogLevel.CRITICAL){
             System.out.println(toWrite);
             System.exit(1);
-        } else if (level == LogLevel.DEBUG)
+        } else if (level == LogLevel.DEBUG || logEverything)
             System.out.println(toWrite);
     }
     
