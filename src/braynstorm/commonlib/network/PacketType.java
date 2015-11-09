@@ -36,8 +36,8 @@ public class PacketType {
      *  
      * 	    List<ShellCharacter> characters<br>
      *          -- int raceData,<br>
-     *          -- short nameLen,<br>
-     *          -- short zoneNameLen,<br>
+     *          -- short nameLen,<br> // BYTES
+     *          -- short zoneNameLen,<br> // BYTES
      *          -- char[nameLen] name,<br>
      *          -- char[zoneNameLen] zoneName<br>
      *          
