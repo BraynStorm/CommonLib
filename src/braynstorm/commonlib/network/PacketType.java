@@ -64,7 +64,7 @@ public class PacketType {
     
     /**
      * data:<br>
-     * 	int id,<br>
+     * 	[int id],<br>
      * 	byte isInMotion,<br>
      * 	Vector3f position,<br>
      * 	Vector3f forward,<br>
@@ -75,7 +75,7 @@ public class PacketType {
     
     /**
      * data:<br>
-     * 	int id,<br>
+     * 	[int id],<br>
 	 *  Map<Integer, {@link ItemStack}> itemList <slotID, itemData><br>
      */
     public static final short ENTITY_EQUIPMENT_UPDATE = (short) 0x00_06;
@@ -91,7 +91,7 @@ public class PacketType {
     
     /**
      * data:<br>
-     * 	int id,<br>
+     * 	[int id],<br>
      * 	Spell spell<br>
      *  int / Vector3f [targetID || areaPosition]<br>
      */
@@ -109,7 +109,7 @@ public class PacketType {
     
     /**
      * data:<br>
-     * 	int id,<br>
+     * 	[int id],<br>
      * 	ItemStack item.<br>
      * 	int targetID || Vector3f areaPosition,<br>
      */
