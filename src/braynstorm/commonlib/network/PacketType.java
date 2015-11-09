@@ -25,7 +25,6 @@ public class PacketType {
     /**
      * data:<br>
      * 	byte status,<br>
-     *      // 0 - FAILED_UNKNOWN<br>
      *      // 1 - Successful + charList<br>
      *      // 2 - accSuspended<br>
      *      // 3 - accDoesn'tExist<br>
@@ -36,8 +35,8 @@ public class PacketType {
      *  
      * 	    List<ShellCharacter> characters<br>
      *          -- int raceData,<br>
-     *          -- short nameLen,<br> // BYTES
-     *          -- short zoneNameLen,<br> // BYTES
+     *          -- short nameLen,<br>
+     *          -- short zoneNameLen,<br>
      *          -- char[nameLen] name,<br>
      *          -- char[zoneNameLen] zoneName<br>
      *          

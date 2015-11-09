@@ -294,5 +294,12 @@ public class Vector3f {
         return buff;
     }
 
+	public static Vector3f readFromBuffer(ByteBuffer data) {
+		if(data.remaining() < Float.BYTES * 3)
+			throw new IllegalArgumentException("[Vector3f] Buffer doesn't have enough data");
+		
+		return new Vector3f(data.getFloat(), data.getFloat(), data.getFloat());
+	}
+
 }
 
