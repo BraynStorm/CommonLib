@@ -6,7 +6,6 @@ package braynstorm.commonlib.network;
  *
  */
 public class PacketType {
-	
 	/**
 	 * data:<br>
 	 * 	long: System.currentTimeMilli()) at the time of recieving this packet.
