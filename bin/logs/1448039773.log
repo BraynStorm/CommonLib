@@ -1,0 +1,12 @@
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at game.network.Network.connect(Network.java:149)
+	at game.network.Network.run(Network.java:87)
+	at java.lang.Thread.run(Unknown Source)
+Exception in thread "Thread-0" java.nio.channels.CancelledKeyException
+	at sun.nio.ch.SelectionKeyImpl.ensureValid(Unknown Source)
+	at sun.nio.ch.SelectionKeyImpl.readyOps(Unknown Source)
+	at java.nio.channels.SelectionKey.isWritable(Unknown Source)
+	at game.network.Network.run(Network.java:90)
+	at java.lang.Thread.run(Unknown Source)
